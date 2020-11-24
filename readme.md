@@ -1,6 +1,6 @@
 ## Versions
 
-This is fork of Python-for-Lazarus for Legacy Python 2.7. It is based on the [2020.07.31](https://github.com/Alexey-T/Python-for-Lazarus/releases/tag/2020.07.31) release of Python-for-Lazarus (subsequent releases require Python 3.x).
+This is fork of Python-for-Lazarus for Legacy Python 2.7 (though it also supports Python 3.x). It is based on the [2020.07.31](https://github.com/Alexey-T/Python-for-Lazarus/releases/tag/2020.07.31) release of Python-for-Lazarus (subsequent releases require Python 3.x).
 
 Supports OS:
 
