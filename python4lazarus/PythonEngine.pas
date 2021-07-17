@@ -2284,6 +2284,7 @@ type
     { end date/time functions }
     function PyString_FromString( str: PAnsiChar): PPyObject; override;
     function PyString_AsDelphiString( ob: PPyObject): AnsiString; override;
+    function PyUnicode_AsUTF8( ob: PPyObject): AnsiString;
     function PyString_AsAnsiString( ob: PPyObject): AnsiString;
     function PyString_AsWideString( ob: PPyObject): UnicodeString;
 
@@ -6532,6 +6533,11 @@ begin
     Result := AnsiString(PyUnicode_AsWideString(ob))
   else
     Result := AnsiString(PyString_AsString(ob));
+end;
+
+function TPythonEngine.PyUnicode_AsUTF8(ob: PPyObject): AnsiString;
+begin
+    Result := PyString_AsDelphiString(ob);
 end;
 
 function TPythonEngine.PyString_AsAnsiString( ob: PPyObject): AnsiString;
